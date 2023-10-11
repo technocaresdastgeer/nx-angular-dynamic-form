@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title = 'angular'
   questions$: Observable<QuestionBase<any>[]>;
 
   constructor( service: QuestionService){
@@ -23,8 +24,5 @@ export class AppComponent {
 
     this.questions$
       .subscribe((arg: any) =>  console.log(arg));
-    
-    
-
   }
 }
